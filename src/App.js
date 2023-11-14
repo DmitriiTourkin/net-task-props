@@ -9,13 +9,10 @@ function FilmListing() {
     {id: 6, rating: 2},
     {id: 7, rating: 6},
   ];
-    //Желательно проверку провести в самом начале, а не в компоненте Stars.
-    // Однако проверка на тип и соответствие диапазону рейтинга в компоненте тоже написана
-  const ratedFilms = films.filter(film => {return typeof film.rating !== 'string' && film.rating < 6 && film.rating > 0});
 
   return (
       <div className="films-block">
-          {ratedFilms.map((film) => (
+          {films.map((film) => (
               <div className="film-card">
                   <div className="film-info">
                       <h4>Название фильма</h4>
@@ -35,7 +32,7 @@ function Stars(props) {
   const count = props.count;
 
   if (count < 1 || count > 5 || typeof count === 'string') {
-    return 'Рейтинг не найден';
+    return '';
   };
 
   const listOfStars = [];
@@ -60,8 +57,6 @@ function Star() {
         </svg>
     );
 };
-
-
 
 function App() {
   return (
