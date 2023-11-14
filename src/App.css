@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+li {
+  list-style-type: none;
+}
+
+
+.film-card {
+  background-color: white;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.films-showing {
+  margin: 50px;
+}
+
+.film-info {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.film-image {
+  text-align: left;
+}
+body {
+  background-color: antiquewhite;
+  font-family: "Onest";
+}
